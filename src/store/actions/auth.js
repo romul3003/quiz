@@ -18,7 +18,6 @@ export function auth(email, password, isLogin) {
 		}
 
 		const response = await axios.post(url, authData)
-		console.log(response.data)
 		const data = response.data
 
 		const expirationDate = new Date(new Date().getTime() + /*data.expiresIn*/ 3600 * 1000)
